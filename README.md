@@ -15,14 +15,14 @@ Dates are counted as the number of days since [January 1, 2020](https://github.c
 Access the original Czech FOI data from a [Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz). To learn how the Pivot CSV files in the TERRA folder were created, see the [wiki](https://github.com/gitfrid/CzechFOI-DA/wiki)
 
 <br>**Abbreviations:** The figures are per age group from the CSV files in the TERRA folder:
-| **Deaths**        | **Definition**                                                       | **Population/Doses**  | **Definition**                                        |
-|-------------------|----------------------------------------------------------------------|-----------------------|-------------------------------------------------------|
-| NUM_D             | Number deaths                                                        | NUM_POP               | Total people                                          |
-| NUM_DUVX          | Number unvaxed deaths                                                | NUM_UVX               | Number of unvaxed people                              |
-| NUM_DVX           | Number vaxed deaths                                                  | NUM_VX                | Number of vaxed people                                |
-| NUM_DVD1-DVD7     | Number deaths doses 1 - 7                                            | NUM_VD1-VD7           | Number of vax doses 1 - 7                             |
-| NUM_DVDA          | Number deaths from all doses                                         | NUM_VDA               | Total number of all vax doses (sum)                   |
-| dAEFI             | simulated death Adverse Events following imun.                       |                       |                                                       |
+| **Deaths**        | **Definition**                                             | **Population/Doses**  | **Definition**                                        |
+|-------------------|------------------------------------------------------------|-----------------------|-------------------------------------------------------|
+| NUM_D             | Number deaths                                              | NUM_POP               | Total people                                          |
+| NUM_DUVX          | Number unvaxed deaths                                      | NUM_UVX               | Number of unvaxed people                              |
+| NUM_DVX           | Number vaxed deaths                                        | NUM_VX                | Number of vaxed people                                |
+| NUM_DVD1-DVD7     | Number deaths doses 1 - 7                                  | NUM_VD1-VD7           | Number of vax doses 1 - 7                             |
+| NUM_DVDA          | Number deaths from all doses                               | NUM_VDA               | Total number of all vax doses (sum)                   |
+| dAEFI             | simulated death Adverse Events following imun.             |                       |                                                       |
 <br>
 
 _________________________________________
