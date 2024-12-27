@@ -28,22 +28,22 @@ Access the original Czech FOI data from a [Freedom of Information request](https
 <br>
 
 _________________________________________
-**Interactive html plot simulation with the Czech FOI data. <br>Age group comparison simulation of dAEFI : AG_70-74 vs 75-79**
+**dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_50-54**
 <br>
 
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20known%20basline%20DAY_RNG_250%20WD_14%20%20AG_50-54.png width="1280" height="auto">
 <br>
 
-**T** .
+**If the baseline is known (which is not the case in practice), the estimated dAEFIs per dose are quite accurate, e.g., 4408 vs. 5000.** .
 
 _________________________________________
-**: AG_70-74 vs 75-79**
+**dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_75-79**
 <br>
 
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20known%20basline%20DAY_RNG_250%20WD_14%20%20AG_75-79.png width="1280" height="auto">
 <br>
 
-The py script ending with **same-scale** uses the same y-axis scale for both age groups. Use this version to compare similar age groups. The file ending with **different-scale** uses different y-axes with different scales for each age group.
+**The estimated dAEFIs per dose, e.g., 4179 vs. 5000.** .
 _________________________________________
 
 **: AG_50-54 vs 75-79**
