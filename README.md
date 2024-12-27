@@ -32,8 +32,7 @@ _________________________________________
 <img src= width="1280" height="auto">
 <br>
 
-**The first derivative represents speed** because it measures how fast something changes over time.
-**The second derivative represents acceleration** as it measures how fast the speed (or first derivative) changes over time, showing how quickly the speed is increasing or decreasing.
+**T** .
 
 _________________________________________
 **: AG_70-74 vs 75-79**
