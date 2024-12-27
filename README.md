@@ -1,5 +1,4 @@
-### CzechFOI-DA
-**Czech FOI Simulation Analysis** 
+### CzechFOI-DA **Czech FOI Simulation Analysis** 
 <br>
 <br>**Investigates whether there is a reliable statistical way to determine the dAEFI rate when the baseline is unknown (ral world).**
 <br>
