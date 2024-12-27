@@ -1,10 +1,10 @@
 ### CzechFOI-DA
-
 **Czech FOI Simulation Analysis** 
 <br>
 <br>**Investigates whether there is a reliable statistical way to determine the dAEFI rate when the baseline is unknown (ral world).**
-<br>Simulates dAEFIs to analyse the impact on the curve and back-calculate the dAEFIs rate (comparing known and unknown baseline).
-<br>Uses real Czech FOI (Freedom of Information) data, or generates d, dvx, duvx data in modulated sine wave form.
+<br>
+Simulates dAEFIs to analyse the impact on the curve and back-calculate the dAEFIs rate (comparing known and unknown baseline).
+Uses real Czech FOI (Freedom of Information) data, or generates d, dvx, duvx data in modulated sine wave form.
 Requires some IT knowledge.
 
 The [Python Scripts](https://github.com/gitfrid/CzechFOI-DA/tree/main/Py%20Scripts) process and visualize CSV data from the [TERRA folder](https://github.com/gitfrid/CzechFOI-DA/tree/main/TERRA), generating interactive HTML plots. <br>Each plot compares two age groups. To interact with the plots, click on a legend entry to show/hide curves.
