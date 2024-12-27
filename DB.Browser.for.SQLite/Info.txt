@@ -1,0 +1,21 @@
+Download the tool ‘DB Browser for SQLite’ version 3.13.0 from:
+https://sqlitebrowser.org/dl/
+
+With the DB SQLite Explorer tool you can easily create an empty database and name it e.g. CZFOI.db. 
+
+
+Download the file Vesely_106_202403141131.csv and import the CSV data into a table, e.g. ‘Czech’, in the new database.
+
+Download CSV file: https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz
+
+
+The SQL query ‘All SQL Queries.sql’ in the SQLQueries folder analyses the data from the table czech,
+and displays the results in several different database views.
+Execute the query in the query window of the DB SQLite Explorer tool.
+
+The database views have been exported to the terra Folder,
+by right-clicking on the view in the DB Browser for SQLite tool.
+
+
+The phyton scripts then analyse the aggregated data from the csv files and display them visually. 
+Open the desired py scripts with Visual Studio Code and execute them, which will create the interactive html plot files in the "Plot Results" Folder .

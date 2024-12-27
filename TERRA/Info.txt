@@ -1,0 +1,11 @@
+The Pivot CSV files in the TERRA folder were exported from views in a SQLite database (czech.db), 
+created using DB Browser for SQLite. 
+
+The database was populated with data from a Czech Freedom of Information request (Vesely_106_202403141131.csv). 
+
+Views in the database were generated using the SQL query in "All SQL Queries.sql." 
+
+The Python scripts then processes the data from the pivot CSV files in the TERRA folder.
+
+
+

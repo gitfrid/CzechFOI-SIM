@@ -1,0 +1,10 @@
+These scripts generate interactive HTML plot files containing two age groups for comparison, with a custom legend. 
+The code has been refactored for improved functionality.
+
+A plot_name variable is defined to name both the HTML file and the output directory where the results are saved. 
+The script also copies itself into the output directory, ensuring that all used parameters are documented.
+
+To use the scripts in Visual Studio Code, the necessary modules must first be imported into the Python console.
+
+For more information on using Plotly, refer to:
+https://plotly.com/python/plotly-express/
