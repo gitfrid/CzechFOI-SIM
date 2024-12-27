@@ -15,16 +15,15 @@ import csv
 # This script processes data from pivot CSV files located in the TERRA folder, 
 # which were generated from a Czech Freedom of Information request (Vesely_106_202403141131.csv). 
 # The pivot files were created using the DB Browser for SQLite.
+# can simulate adding dAEFIs (deadly adverse event following immun.) 
+# can also simulate modulated sin waves for d, duvx , dvx, (dvda -deaths all v doses)  
 
 
-title_text="Simulate D as modulated sin curve - threshold dAEFI 1/5000 DOSE RAND_DAY_RNG 1-250 AG 50-54 vs 75-79" # Title of plot
-annotation_text = "normalized per 10000 People log scale using real VDA Data"
-plotfile_name = "AB) backcalc dAEFI simulation" 
+title_text="Simulate D add dAEFI to real Data - threshold dAEFI 1/5000 DOSE RAND_DAY_RANGE 1-250 WND_14 AG 50-54 vs 75-79" # Title of plot
+annotation_text = "legend: ae -> dAEFIs added, n-> normalized per 10000 People, pe -> simulate equal death rate proportional to population for dvx and duvx"
+plotfile_name = "AB) backcalc dAEFI simulation real world basline" 
 plot_name_append_text=""        # apend text - to plotfile name and directory, to save in uniqe file location
-window_size_correl=300          # window size for rolling pearson correlation
-max_phase_shift=300             # max phase shift for phase shift correlation
-target_decay_time=70            # paramter to adjust decay target_percentage to calculate the dacy time 
-normalize=True                 # normalize dvd values
+normalize=True                  # normalize dvd values
 normalize_cumulate_deaths=False # normalize cumulated deaths bevore cummulation
 population_minus_death=False    # deducts the deceased from the total population
 custom_legend_column = 10       # A change could require adjustments to the code. 
@@ -34,13 +33,14 @@ window_size_mov_average =30     # Define the window size for the rolling average
 
 # Define the event threshold (1 in 10,000 VDA events triggers an event)
 event_threshold = 5000          # Trigger simulates one  dAEFI (deadly adverse event following immunisation) per 5,000 VDA (vax dose all)
-future_day_range = 250          # Random future day range (1 to 25)
-window_size = 7                 # Define the window size for the rolling average dAEFI (adjust this as needed)
+future_day_range = 250          # Random future day range (for example 1 to 14)
+window_size = 14                # Define the window size for the rolling average dAEFI (adjust this as needed)
 
 # simulation behavior
 simulate_sinus = False              # uses modulated sin wave to simulate Death curve
-simulate_proportinal_norm = False   # simulate constant death curve adjusted to (uvx, vx , total) population (use real data or sin simulation each dey)
+simulate_proportinal_norm = False   # simulate constant death curve adjusted to (uvx, vx , total) population (use real data or sin wave for each dey 1..1534)
 simulate_dAEFI = True
+real_world_baseline = True
 
 def main():
 
@@ -92,7 +92,6 @@ def main():
     color_shades = generate_color_shades(color_palette, n_pairs=11)
     color_shades_r = generate_color_shades(color_palette_r, n_pairs=11)
 
-
     # Loop through each pair of age bands in the list
     pair_nr = 0    
     for age_band_pair in age_band_compare:    
@@ -101,10 +100,10 @@ def main():
 
         for k in range(0, 2):        # plot simulate add dAEFI
             if k==0: 
-                simulate_proportinal_norm = False     
+                simulate_dAEFI = False     
                 aefi = ""
             else: 
-                simulate_proportinal_norm = True
+                simulate_dAEFI = True
                 aefi = "ae " # legend prefix if true
 
             for j in range(0, 2):        # plot simulate proportional dvx duvx dvda curves with similar death rates
@@ -125,7 +124,14 @@ def main():
                                 
                     # Get the shades for the current index and age band pair
                     for idx, age_band in enumerate(age_band_pair):
-                        
+
+                        # Use Plotly and Plotly_r color palette with 10 different colors 
+                        # for the two age groups and plot additional decay and correlation traces
+                        if idx == 0:    
+                            colors = px.colors.qualitative.Plotly                    
+                        elif idx == 1:  
+                            colors = px.colors.qualitative.Plotly_r          
+
                         # Define the days range (from 0 to 1530)
                         max_days = len(dataframes_vd[0][age_band])
                         days = np.linspace(0, max_days-1, max_days) 
@@ -236,12 +242,7 @@ def main():
                                 print(f"uvx + vx != D at time {t}: sin_1 + sin_2 = {sum_sin_1_2}, sin_0 = {sin_curves[0][t]}")
                             
                             # Append proportions to the lists for plotting (as functions of t)
-                            proportions.append(C)
-                            #proportions_uvx.append(prop_uvx)
-                            #proportions_vx.append(prop_vx)
-                            #proportions_vda.append(prop_vda)
-
-                            
+                            proportions.append(C)                          
 
                         # Simulate dAFEI (fatal deadly Adverse Event Following Immunization)
                         mov_average_vd = dataframes_vd[3][age_band].rolling(window=window_size, min_periods=1).mean()    
@@ -290,7 +291,7 @@ def main():
 
                             # After VDA events are simulated, the D events (with added VDA events) are in the same dataframe:
                             d_events_with_vda = sin_curves[0]  # D events after VDA additions
-                            d_avg_with_vda = pd.Series(d_events_with_vda).rolling(window=window_size, min_periods=1).mean()
+                            baseline_d_avg_with_vda = pd.Series(d_events_with_vda).rolling(window=window_size, min_periods=1).mean()
 
                         # Step 2: Calculate a rolling average of D events as the baseline            
 
@@ -302,23 +303,26 @@ def main():
                         event_thresholds = []  # List to store estimated event thresholds
 
                         # Step 3: Calculate additional D events triggered by VDA
+                        estimated_th_events = [0] * len(sin_curves[0])
                         for day_idx in range(len(vda_events)):
                             vda_value = vda_events[day_idx]
 
                             # Calculate the D values if you know the baseline without VDA
-                            #d_value_with_vda = d_avg_with_vda[day_idx]
-                            #baseline_d_value = baseline_d_avg_without_vda[day_idx]
-                            
+                            if real_world_baseline == False:
+                                d_value_with_vda = baseline_d_avg_with_vda[day_idx]
+                                baseline_d_value = baseline_d_avg_without_vda[day_idx]
+                                
                             # Calculate the D values if you don't know the baseline without VDA (real world scenario)
-                            d_value_with_vda = d_events_with_vda[day_idx]
-                            baseline_d_value = d_avg_with_vda[day_idx]
+                            if real_world_baseline == True:
+                                d_value_with_vda = d_events_with_vda[day_idx]
+                                baseline_d_value = baseline_d_avg_with_vda[day_idx]
 
                             # Calculate the additional D events (difference between D with VDA and baseline D)
                             additional_d = d_value_with_vda - baseline_d_value
 
                             # Debugging: Print the excess D event calculation
                             # print(f"Day {day_idx}: VDA = {vda_value}, D (with VDA) = {d_value_with_vda}, Baseline D (with VDA) = {baseline_d_value}, Additional D = {additional_d}")
-
+                                                        
                             # If the additional D events are greater than zero, we count them
                             if additional_d > 0:
                                 additional_d_events.append(additional_d)
@@ -330,6 +334,7 @@ def main():
                                 if len(additional_d_events) > 0:
                                     # Estimate how many VDA events per D event (average over the accumulated events)
                                     estimated_threshold = cumulative_vda / sum(additional_d_events)
+                                    estimated_th_events[day_idx] += estimated_threshold
                                     event_thresholds.append(estimated_threshold)
 
                         # Step 4: Calculate the average event threshold
@@ -450,40 +455,78 @@ def main():
                                 line=dict(dash='dot', width=1.5, color=shades_2[4]),
                                 secondary=True,
                                 axis_assignment=yaxis
-                            )
-                            
-                            yaxis='y7'
+                            )                                                        
+
+                        if simulate_dAEFI:                                
                             # Add dAEFI                
-                            ave_daefi_events = pd.Series(daefi_events).rolling(window=window_size_mov_average, min_periods=1).mean()
+                            yaxis='y7'                                
+                            ave_daefi_events = pd.Series(daefi_events).rolling(window=window_size, min_periods=1).mean()
                             trace_manager.add_trace(
                                 name=f'dAEFI {dae}{age_band_extension}', 
                                 x=dataframes_vd[i].iloc[:, 0],  
                                 y=ave_daefi_events,            
-                                line=dict(dash='dot', width=1.5, color=shades_2[4]),
+                                line=dict(dash='solid', width=1.5, color=colors[(j+1) % len(colors)]),
                                 secondary=True,
                                 axis_assignment=yaxis
                             )
-                                    
 
-                        # Use Plotly and Plotly_r color palette with 10 different colors 
-                        # for the two age groups and plot additional decay and correlation traces
-                        if idx == 0:    
-                                colors = px.colors.qualitative.Plotly                    
-                        elif idx == 1:  
-                                # colors = ['darkblue', 'purple', 'darkorange']    
-                                colors = px.colors.qualitative.Plotly_r                   
-                        
-                        yaxis='y7'
+                            # Add horizontal line at the mean of ave_daefi_events
+                            yaxis='y7'
+                            mean_ave_daefi_events = ave_daefi_events.mean()
+                            trace_manager.add_trace(
+                                name=f'Mean dAEFI {dae}{age_band_extension}', 
+                                x=dataframes_vd[i].iloc[:, 0],  
+                                y=[mean_ave_daefi_events] * len(dataframes_vd[i].iloc[:, 0]),  # horizontal line
+                                line=dict(dash='solid', width=1.5, color=colors[(j+1) % len(colors)]), 
+                                secondary=True,
+                                axis_assignment=yaxis
+                            )
+                           
+                            # Add estimated threshold (= estimated dAEFI per x doses)                 
+                            yaxis='y5'
+                            ave_estimated_th_events = pd.Series(estimated_th_events).rolling(window=window_size, min_periods=1).mean()
+                            trace_manager.add_trace(
+                                name=f'estim dAEFI {dae}{age_band_extension}', 
+                                x=dataframes_vd[i].iloc[:, 0],  
+                                y=ave_estimated_th_events,            
+                                line=dict(dash='solid', width=1.5, color=colors[(j+2) % len(colors)]),
+                                secondary=True,
+                                axis_assignment=yaxis
+                            )      
+
+                            # Add horizontal line at the mean for estimated dAEFI per x doses
+                            yaxis='y5'
+                            mean_ave_estimated_th_events = ave_estimated_th_events.mean()
+                            trace_manager.add_trace(
+                                name=f'Mean estim dAEFI {dae}{age_band_extension}', 
+                                x=dataframes_vd[i].iloc[:, 0],  
+                                y=[mean_ave_estimated_th_events] * len(dataframes_vd[i].iloc[:, 0]),  # horizontal line
+                                line=dict(dash='solid', width=1.5, color=colors[(j+2) % len(colors)]), 
+                                secondary=True,
+                                axis_assignment=yaxis
+                            )
+ 
+                            # Add horizontal line at the used event_threshold value
+                            yaxis='y5'
+                            trace_manager.add_trace(
+                                name=f'Event Threshold {dae}{age_band_extension}', 
+                                x=dataframes_vd[i].iloc[:, 0],  
+                                y=[event_threshold] * len(dataframes_vd[i].iloc[:, 0]),  # horizontal line at event_threshold
+                                line=dict(dash='solid', width=1.5, color='orange'),  # Red color for the threshold line
+                                secondary=True,
+                                axis_assignment=yaxis
+                            )
+
                         # Add proportion constant c 
+                        yaxis='y7'                        
                         trace_manager.add_trace(
                             name=f'C {dae}{age_band_extension}', 
                             x=dataframes_vd[i].iloc[:, 0],  
                             y=proportions,            
-                            line=dict(dash='dot', width=1.5, color=colors[(j+1) % len(colors)]),
+                            line=dict(dash='dot', width=1.5, color=colors[(j+3) % len(colors)]),
                             secondary=True,
                             axis_assignment=yaxis
                         )
-
                         
                         # Assign the plot traces-curves to the y-axis
                         plot_layout(trace_manager.get_fig(), px.colors.qualitative.Dark24)
