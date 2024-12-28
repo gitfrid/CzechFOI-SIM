@@ -86,6 +86,22 @@ _________________________________________
 The estimated dAEFIs per dose, e.g., 5138 vs. 5000 - if basline is known.
 _________________________________________
 
+**dAEFI simulation unknown Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_54-59**
+<br>
+
+The legend label "pe" calculates the mortality curves for D, DUVX, and DVX, assuming that the vx and uvx populations have the same hypothetical mortality probability (distribution). Additionally, 1/5000 dAEFIs are added (legend label "ae").
+<br>
+The lower part of the plot shows the result of the normalized mortality curves (deaths/100,000 people - legend label "n"). Since the mortality probability for D, VX, and UVX is assumed to be identical, the normalized curves overlap.
+<br>
+
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20leged%20an_pr_n%20%20AG_50-54.png width="1280" height="auto">
+<br>
+<img src= width="1280" height="auto">
+<br>
+
+The estimated dAEFIs per dose, e.g., 388 vs. 5000 - if basline is unknown.
+_________________________________________
+
 ### Software Requirements:
 - [Python 3.12.5](https://www.python.org/downloads/) to run the scripts.
 - [Visual Studio Code 1.92.2](https://code.visualstudio.com/download) to edit and run scripts.
