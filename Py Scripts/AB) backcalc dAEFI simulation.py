@@ -19,9 +19,9 @@ import csv
 # can also simulate modulated sin waves for d, duvx , dvx, (dvda -deaths all v doses)  
 
 
-title_text="Simulate D add dAEFI to real Data - threshold dAEFI 1/5000 DOSE RAND_DAY_RANGE 1-250 WND_14 AG 50-54 vs 75-79" # Title of plot
+title_text="Simulate D add dAEFI to simulated sinus Wave - threshold dAEFI 1/5000 DOSE RAND_DAY_RANGE 1-250 WND_14 AG 50-54 vs 75-79" # Title of plot
 annotation_text = "legend: ae -> dAEFIs added, n-> normalized per 10000 People, pe -> simulate equal death rate proportional to population for dvx and duvx"
-plotfile_name = "AB) backcalc dAEFI simulation real world basline" 
+plotfile_name = "AB) backcalc dAEFI simulation sinus real world basline" 
 plot_name_append_text=""        # apend text - to plotfile name and directory, to save in uniqe file location
 normalize=True                  # normalize dvd values
 normalize_cumulate_deaths=False # normalize cumulated deaths bevore cummulation
@@ -37,7 +37,7 @@ future_day_range = 250          # Random future day range (for example 1 to 14)
 window_size = 14                # Define the window size for the rolling average dAEFI (adjust this as needed)
 
 # simulation behavior
-simulate_sinus = False              # uses modulated sin wave to simulate Death curve
+simulate_sinus = True           # uses modulated sin wave to simulate Death curve
 simulate_proportinal_norm = False   # simulate constant death curve adjusted to (uvx, vx , total) population (use real data or sin wave for each dey 1..1534)
 simulate_dAEFI = True
 real_world_baseline = True
@@ -65,12 +65,12 @@ def main():
         ]
 
     modulated_wave_params_ag1 = [
-                    {'small_period': 3, 'large_period': 180, 'small_amplitude': 1, 'large_amplitude': 2, 'vertical_shift': 5, 'horizontal_shift': 0}, # Curve 1 DUVX - AG1
+                    {'small_period': 3, 'large_period': 360, 'small_amplitude': 1, 'large_amplitude': 2, 'vertical_shift': 5, 'horizontal_shift': 0}, # Curve 1 DUVX - AG1
                     {'small_period': 3, 'large_period': 360, 'small_amplitude': 1, 'large_amplitude': 2, 'vertical_shift': 5, 'horizontal_shift': 0}, # Curve 2 DVX - AG1
         ]  
     
     modulated_wave_params_ag2 = [
-                    {'small_period': 3, 'large_period': 180, 'small_amplitude': 5, 'large_amplitude': 20, 'vertical_shift': 50, 'horizontal_shift': 0}, # Curve 1 DUVX - AG2
+                    {'small_period': 3, 'large_period': 360, 'small_amplitude': 5, 'large_amplitude': 20, 'vertical_shift': 50, 'horizontal_shift': 0}, # Curve 1 DUVX - AG2
                     {'small_period': 3, 'large_period': 360, 'small_amplitude': 5, 'large_amplitude': 20, 'vertical_shift': 50, 'horizontal_shift': 0}, # Curve 2 DVX - AG2
         ]
 
