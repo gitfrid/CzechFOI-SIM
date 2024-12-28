@@ -79,10 +79,10 @@ _________________________________________
 **dAEFI simulation unknown Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_54-59**
 <br>
 
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20d-duvx-dvx%20sinus%20curve%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20%20AG_50-54.png width="1280" height="auto">
 <br>
 
-**The estimated dAEFIs per dose, e.g.,  39 vs. 5000.** .
+**Simulation of sinus curves for D, DVX, and DUVX, adding one dAEFI per 5000 doses in a random 1-250 day window after dose** .
 _________________________________________
 
 ### Software Requirements:
