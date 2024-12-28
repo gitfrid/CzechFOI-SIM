@@ -91,7 +91,8 @@ _________________________________________
 
 The legend label "pe" calculates the mortality curves for D, DUVX, and DVX, assuming that the vx and uvx populations have the same hypothetical mortality probability (distribution). Additionally, 1/5000 dAEFIs are added (legend label "ae").
 <br>
-The lower part of the plot shows the result of the normalized mortality curves (deaths/100,000 people - legend label "n"). Since the mortality probability for D, VX, and UVX is assumed to be identical, the normalized curves overlap.
+
+The lower part of the first plot shows the result of the normalized mortality curves (deaths/100,000 people - legend label "n"). Since the mortality probability for D, VX, and UVX is assumed to be identical, the normalized curves overlap.
 <br>
 
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20leged%20an_pr_n%20%20AG_50-54.png width="1280" height="auto">
