@@ -63,7 +63,7 @@ _________________________________________
 **The estimated dAEFIs per dose, e.g.,  39 vs. 5000.** .
 _________________________________________
 
-**D, DVX, DUVX plots. Added dAEFIs (1/5000 Doses) vs non added AEFIs: AG_50-54 vs 75-79**
+**D, DVX, DUVX plots.<br>Added dAEFIs (1/5000 Doses) vs non added AEFIs: AG_50-54 vs 75-79**
 <br>
 <br>
 **As you can see, the added dAEFIs have little impact on the top D-curves for age group 75-79, making it hard to detect a signal without knowing the baseline.
