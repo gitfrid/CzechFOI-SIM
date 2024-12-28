@@ -83,7 +83,7 @@ _________________________________________
 <br>
 
 **Simulation of sinus curves for D, DVX, and DUVX, adding one dAEFI per 5000 doses in a random 1-250 day window after dose** .
-The estimated dAEFIs per dose, e.g., 5138 vs. 5000 - if Basline is known.
+The estimated dAEFIs per dose, e.g., 5138 vs. 5000 - if basline is known.
 _________________________________________
 
 ### Software Requirements:
