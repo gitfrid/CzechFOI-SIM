@@ -76,6 +76,15 @@ I struggled to find a reliable method to back-calculate the dAEFIs ratio using o
 <br>
 _________________________________________
 
+**dAEFI simulation unknown Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_54-59**
+<br>
+
+<img src= width="1280" height="auto">
+<br>
+
+**The estimated dAEFIs per dose, e.g.,  39 vs. 5000.** .
+_________________________________________
+
 ### Software Requirements:
 - [Python 3.12.5](https://www.python.org/downloads/) to run the scripts.
 - [Visual Studio Code 1.92.2](https://code.visualstudio.com/download) to edit and run scripts.
