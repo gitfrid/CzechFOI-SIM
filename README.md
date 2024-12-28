@@ -6,7 +6,7 @@
 Simulates dAEFIs to analyse the impact on the curve and back-calculate the dAEFIs rate (comparing known and unknown baseline).
 Uses real Czech FOI (Freedom of Information) data, or generates d, dvx, duvx data in modulated sine wave form.
 
-Simulated Date can be used to check for calculation errors in your code, it is possible to create a CSV file with the data of all Plot curves (from day 1-1534).
+Simulated data can be used to check for calculation errors in your code, it is possible to create a CSV file with the data of all Plot curves (from day 1-1534).
 
 The [Python Scripts](https://github.com/gitfrid/CzechFOI-SIM/tree/main/Py%20Scripts) process and visualize CSV data from the [TERRA folder](https://github.com/gitfrid/CzechFOI-SIM/tree/main/TERRA), generating interactive HTML plots. <br>Each plot compares two age groups. To interact with the plots, click on a legend entry to show/hide curves.
 
