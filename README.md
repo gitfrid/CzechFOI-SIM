@@ -54,7 +54,7 @@ _________________________________________
 **If the baseline is unknown (which is the case in practice), the estimated dAEFI per dose are not reliable , e.g., 136 vs. 5000.** .
 
 _________________________________________
-**dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_75-79**
+**dAEFI simulation unknown Basline (real world). <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_75-79**
 <br>
 
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20%20AG_75-79.png width="1280" height="auto">
@@ -63,7 +63,7 @@ _________________________________________
 **The estimated dAEFIs per dose, e.g.,  39 vs. 5000.** .
 _________________________________________
 
-**D, DVX, DUVX plots added dAEFIs (1/5000 Doses) vs non AEFIs: AG_50-54 vs 75-79**
+**D, DVX, DUVX plots.<br>Added dAEFIs (1/5000 Doses) vs non added AEFIs: AG_50-54 vs 75-79**
 <br>
 <br>
 **As you can see, the added dAEFIs have little impact on the top D-curves for age group 75-79, making it hard to detect a signal without knowing the baseline.
@@ -76,7 +76,7 @@ I struggled to find a reliable method to back-calculate the dAEFIs ratio using o
 <br>
 _________________________________________
 
-**dAEFI simulation unknown Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_54-59**
+**dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_54-59**
 <br>
 
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20d-duvx-dvx%20sinus%20curve%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20%20AG_50-54.png width="1280" height="auto">
