@@ -21,7 +21,7 @@ import csv
 
 title_text="Simulate D add dAEFI to simulated sinus Wave - threshold dAEFI 1/5000 DOSE RAND_DAY_RANGE 1-250 WND_14 AG 50-54 vs 75-79" # Title of plot
 annotation_text = "legend: ae -> dAEFIs added, n-> normalized per 10000 People, pe -> simulate equal death rate proportional to population for dvx and duvx"
-plotfile_name = "AB) backcalc dAEFI simulation sinus known basline" 
+plotfile_name = "AB) backcalc dAEFI simulation sinus known basline 1000" 
 plot_name_append_text=""        # apend text - to plotfile name and directory, to save in uniqe file location
 normalize=True                  # normalize dvd values
 normalize_cumulate_deaths=False # normalize cumulated deaths bevore cummulation
@@ -32,12 +32,12 @@ savetraces_to_csv=False         # save calcualted results of all traces into a c
 window_size_mov_average =30     # Define the window size for the rolling average (adjust this as needed)
 
 # Define the event threshold (1 in 10,000 VDA events triggers an event)
-event_threshold = 5000          # Trigger simulates one  dAEFI (deadly adverse event following immunisation) per 5,000 VDA (vax dose all)
+event_threshold = 1000          # Trigger simulates one  dAEFI (deadly adverse event following immunisation) per 5,000 VDA (vax dose all)
 future_day_range = 250          # Random future day range (for example 1 to 14)
 window_size = 14                # Define the window size for the rolling average dAEFI (adjust this as needed)
 
 # simulation behavior
-simulate_sinus = True           # uses modulated sin wave to simulate Death curve
+simulate_sinus = False           # uses modulated sin wave to simulate Death curve
 simulate_proportinal_norm = False   # simulate constant death curve adjusted to (uvx, vx , total) population (use real data or sin wave for each dey 1..1534)
 simulate_dAEFI = True
 real_world_baseline = False
@@ -46,7 +46,7 @@ def main():
 
     # List of tuples with the age bands you want to compare
     age_band_compare = [
-                ('50-54', '75-79'),
+                ('65-69', '75-79'),
         ]
         
     # CSV file pairs with age_band with death and population/doses data  
@@ -93,11 +93,11 @@ def main():
     color_shades_r = generate_color_shades(color_palette_r, n_pairs=11)
 
     # Loop through each pair of age bands in the list
-    pair_nr = 0    
+    pair_nr = 0
     for age_band_pair in age_band_compare:    
         # Create an instance of TraceManager
         trace_manager = TraceManager()   
-
+        dae = ""
         for k in range(0, 2):        # plot simulate add dAEFI
             if k==0: 
                 simulate_dAEFI = False     
@@ -106,8 +106,8 @@ def main():
                 simulate_dAEFI = True
                 aefi = "ae " # legend prefix if true
 
-            for j in range(0, 2):        # plot simulate proportional dvx duvx dvda curves with similar death rates
-                if j==0: 
+            for r in range(0, 2):        # plot simulate proportional dvx duvx dvda curves with similar death rates
+                if r==0: 
                     simulate_proportinal_norm = False     
                     prop = ""
                 else: 
@@ -117,11 +117,12 @@ def main():
                 for s in range(0, 2):        #  plot normalized per 100000 people ( or dvda - doses)
                     if s==0: 
                         normalize = False     
-                        dae = f"{aefi}{prop}"
+                        norm = ""
                     else: 
                         normalize = True
-                        dae = f"{aefi}{prop}n " 
-                                
+                        norm = "n "
+                        
+                    dae = f"{aefi}{prop}{norm}" # legend prefix                           
                     # Get the shades for the current index and age band pair
                     for idx, age_band in enumerate(age_band_pair):
 
@@ -205,6 +206,7 @@ def main():
 
                         # Loop through each day (time point)
                         proportions = []
+                        trace_block = ""
                         for t in range(len(sin_curves[0])):
 
                             # Calculate population proportions for UVX and VX
@@ -222,15 +224,18 @@ def main():
                                 sin_curves[1][t] = sin_curves[1][t]  # DUVX 
                                 sin_curves[2][t] = sin_curves[2][t]  # DVX
                                 sin_curves[3][t] = sin_curves[3][t]  # DVDA
-
+                                
                             if simulate_proportinal_norm and not simulate_sinus:
+                                # print (f"proportinal {simulate_proportinal_norm}: sinus {simulate_sinus}: - {dae}" )                                
                                 sin_curves[0][t] = dataframes_dvd[0][age_band][t]
                                 sin_curves[1][t] = C * dataframes_dvd[0][age_band][t]
                                 sin_curves[2][t] = dataframes_dvd[0][age_band][t] - (dataframes_dvd[0][age_band][t]*C)
                                 sin_curves[3][t] = dataframes_dvd[0][age_band][t] - (dataframes_dvd[0][age_band][t]*C2)
 
                             if not simulate_proportinal_norm and not simulate_sinus:
+                                trace_block = "b2"
                                 # Real data simulate proportional deaths for vx uvx vda
+                                # print (f"prop {simulate_proportinal_norm}: sinus {simulate_sinus}: - {dae}" )
                                 sin_curves[0][t] = dataframes_dvd[0][age_band][t]
                                 sin_curves[1][t] = dataframes_dvd[1][age_band][t]
                                 sin_curves[2][t] = dataframes_dvd[2][age_band][t]
@@ -280,7 +285,8 @@ def main():
                                     # Add dAEFI event to sin_curves d, vx, dvda at the future day index                                                
                                     add_d_events = cumulative_vda // event_threshold 
                                     d_add += add_d_events
-                                    if simulate_dAEFI:                                        
+                                    if simulate_dAEFI:               
+                                        #add_d_events = 0                         
                                         daefi_events[future_idx]  += add_d_events # save to plot later
                                         sin_curves[0][future_idx] += add_d_events
                                         sin_curves[2][future_idx] += add_d_events
@@ -355,43 +361,45 @@ def main():
                             
                             age_band_extension = age_band.split('-')[0]  
 
-                            # Now, assign these sine waves to the respective columns in dataframes_dvd
+                            # assign these sine waves to the respective columns in dataframes_dvd only if flag simulate_sinus is true!!
+                            # Initialize df_dvd if not already done (make sure df_dvd is defined somewhere before this code)
+                            df_dvd = [df.copy() for df in dataframes_dvd]  # Create a new list of dataframes, identical to dataframes_dvd initially
                             leading_zeros = 0
                             if  i == 0:
-                                leading_zeros = first_nonzero_index(dataframes_dvd[i][age_band]) 
+                                leading_zeros = first_nonzero_index(df_dvd[i][age_band]) 
                                 #print (f"idx:{idx} i:{i} AGE:{age_band} zeros:{leading_zeros}")
                                 sin_curves[0] = fill_leading_days_with_zeros(sin_curves[0], leading_zeros)
-                                dataframes_dvd[i][age_band] = sin_curves[0]  # Curve 0 D
+                                df_dvd[i][age_band] = sin_curves[0]  # Curve 0 D
                             if  i == 1:
-                                leading_zeros = first_nonzero_index(dataframes_dvd[i][age_band])  
+                                leading_zeros = first_nonzero_index(df_dvd[i][age_band])  
                                 #print (f"idx:{idx} i:{i} AGE:{age_band} zeros:{leading_zeros}")  
                                 sin_curves[1] = fill_leading_days_with_zeros(sin_curves[1], leading_zeros)
-                                dataframes_dvd[i][age_band] = sin_curves[1]  # Curve 1 DUVX
+                                df_dvd[i][age_band] = sin_curves[1]  # Curve 1 DUVX
                             if  i == 2:
-                                leading_zeros = first_nonzero_index(dataframes_dvd[i][age_band]) 
+                                leading_zeros = first_nonzero_index(df_dvd[i][age_band]) 
                                 #print (f"idx:{idx} i:{i} AGE:{age_band} zeros:{leading_zeros}")
                                 sin_curves[2] = fill_leading_days_with_zeros(sin_curves[2], leading_zeros)
-                                dataframes_dvd[i][age_band] = sin_curves[2]  # Curve 2 DVX                    
+                                df_dvd[i][age_band] = sin_curves[2]  # Curve 2 DVX                    
                             if  i == 3:
-                                leading_zeros = first_nonzero_index(dataframes_dvd[i][age_band])  
+                                leading_zeros = first_nonzero_index(df_dvd[i][age_band])  
                                 #print (f"idx:{idx} i:{i} AGE:{age_band} zeros:{leading_zeros}")
                                 sin_curves[3] = fill_leading_days_with_zeros(sin_curves[3], leading_zeros)
-                                dataframes_dvd[i][age_band] = sin_curves[3]  # Curve 3 DVDA
+                                df_dvd[i][age_band] = sin_curves[3]  # Curve 3 DVDA
                                 # dataframes_dvd[i][age_band] = pd.Series(proportions_vx).add(pd.Series(proportions_uvx), fill_value=0)
 
                                 
                             # Normalize the data per 100,000                 
-                            norm_dataframes_dvd = (dataframes_dvd[i][age_band] / cum_pop_vd[i]) * 100000
+                            norm_dataframes_dvd = (df_dvd[i][age_band] / cum_pop_vd[i]) * 100000
                             if normalize:                    
                                 plt_dataframes_dvd = norm_dataframes_dvd 
                             else :
-                                plt_dataframes_dvd = dataframes_dvd[i][age_band]                
+                                plt_dataframes_dvd = df_dvd[i][age_band]                
                             
                             yaxis='y1' 
-                            # Add traces for DVD on primary y-axis
+                            # Add traces for DVD on primary y-axis                            
                             trace_manager.add_trace(
                                 name=f'{os.path.splitext(os.path.basename(csv_files_dvd[i]))[0][4:]} {dae}{age_band_extension}', 
-                                x=dataframes_dvd[i].iloc[:, 0],
+                                x=df_dvd[i].iloc[:, 0],
                                 y=plt_dataframes_dvd,
                                 mode='lines',
                                 line=dict(dash='solid', width=1, color=shades_1[0]),                    
@@ -399,11 +407,11 @@ def main():
                                 axis_assignment=yaxis)
                             
                             yaxis='y1' 
-                            # Calculate add moving average trace for DVD
+                            # Calculate add moving average trace for DVD                            
                             moving_average_dvd = plt_dataframes_dvd.rolling(window=window_size_mov_average).mean()                                
                             trace_manager.add_trace(
                                 name=f'Avg {os.path.splitext(os.path.basename(csv_files_dvd[i]))[0][4:]} {dae}{age_band_extension}', 
-                                x=dataframes_dvd[i].iloc[:, 0], 
+                                x=df_dvd[i].iloc[:, 0], 
                                 y=moving_average_dvd,
                                 line=dict(dash='solid', width=1, color=shades_1[1]), 
                                 secondary=False, 
@@ -413,13 +421,13 @@ def main():
                             if normalize_cumulate_deaths:                   
                                 cum_dataframes_dvd = norm_dataframes_dvd.cumsum()
                             else:
-                                cum_dataframes_dvd = dataframes_dvd[i][age_band].cumsum()   
+                                cum_dataframes_dvd = df_dvd[i][age_band].cumsum()   
                             
                             yaxis='y3'                 
                             # Add cumulative DVD data trace on the secondary y-axis
                             trace_manager.add_trace(
                                 name=f'cum {os.path.splitext(os.path.basename(csv_files_dvd[i]))[0][4:]} {dae}{age_band_extension}', 
-                                x=dataframes_dvd[i].iloc[:, 0],  
+                                x=df_dvd[i].iloc[:, 0],  
                                 y=cum_dataframes_dvd,            
                                 line=dict(dash='dot', width=1.5, color=shades_1[4]),
                                 secondary=True,
@@ -457,7 +465,8 @@ def main():
                                 axis_assignment=yaxis
                             )                                                        
 
-                        if simulate_dAEFI:                                
+                        j=0
+                        if simulate_dAEFI:
                             # Add dAEFI                
                             yaxis='y7'                                
                             ave_daefi_events = pd.Series(daefi_events).rolling(window=window_size, min_periods=1).mean()
