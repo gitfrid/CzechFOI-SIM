@@ -21,7 +21,7 @@ import csv
 
 title_text="Add dAEFIs to real D-Curves or to generated sinus Wave D-Curves  - threshold dAEFI 1/5000 DOSE RAND_DAY_RANGE 1-250 WND_14 AG 50-54 vs 75-79" # Title of plot
 annotation_text = "legend: ae -> dAEFIs added, n-> normalized per 10000 People, pe -> simulate equal death rate for dvx and duvx (proportional to population)"
-plotfile_name = "AB) backcalc dAEFI simulation unknown real world basline" 
+plotfile_name = "AB) backcalc dAEFI simulation sinus real world basline" 
 plot_name_append_text=""        # apend text - to plotfile name and directory, to save in uniqe file location
 normalize=True                  # normalize dvd values
 normalize_cumulate_deaths=False # normalize cumulated deaths bevore cummulation
@@ -32,12 +32,12 @@ savetraces_to_csv=False         # save calcualted results of all traces into a c
 window_size_mov_average =30     # Define the window size for the rolling average (adjust this as needed)
 
 # Define the event threshold (1 in 10,000 VDA events triggers an event)
-event_threshold = 1000          # Trigger simulates one  dAEFI (deadly adverse event following immunisation) per 5,000 VDA (vax dose all)
+event_threshold = 5000          # Trigger simulates one  dAEFI (deadly adverse event following immunisation) per 5,000 VDA (vax dose all)
 future_day_range = 250          # Random future day range (for example 1 to 14)
 window_size = 14                # Define the window size for the rolling average dAEFI (adjust this as needed)
 
 # simulation behavior
-simulate_sinus = False           # uses modulated sin wave to simulate Death curve
+simulate_sinus = True           # uses modulated sin wave to simulate Death curve
 simulate_proportinal_norm = False   # simulate constant death curve adjusted to (uvx, vx , total) population (use real data or sin wave for each dey 1..1534)
 simulate_dAEFI = True
 real_world_baseline = True
