@@ -70,9 +70,9 @@ _________________________________________
 I struggled to find a reliable method to back-calculate the dAEFIs ratio using only the moving average as the baseline (real world). This is particularly true for the older age groups.**
 <br>
 
-<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20d-duvx-dvx%20known%20basline%20DAY_RNG_250%20WD_14%20%20AG_50-54.png width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20d-duvx-dvx%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20%20AG_50-54.png width="1280" height="auto">
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20d-duvx-dvx%20known%20basline%20DAY_RNG_250%20WD_14%20%20AG_75-79.png width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20d-duvx-dvx%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20%20AG_75-79.png width="1280" height="auto">
 <br>
 _________________________________________
 
