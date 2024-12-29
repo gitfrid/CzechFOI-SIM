@@ -99,7 +99,7 @@ Additionally, 1/5000 dAEFIs are added (legend label "ae")
 
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20leged%20an_pr_n%20%20AG_50-54.png width="1280" height="auto">
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20d-duvx-dvx%20sinus%20curve%20legend%20pe%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20%20AG_50-54.png width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/dAEFI/AB)%20backcalc%20dAEFI%20simulation%20sin%20unknown%20real%20world%20basline%20DAY_RNG_250%20WD_14%20leged%20an_pr_n%20%20AG_50-54.png width="1280" height="auto">
 <br>
 
 The estimated dAEFIs per dose, e.g., 388 vs. 5000 - if basline is unknown.
