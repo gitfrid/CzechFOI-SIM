@@ -19,9 +19,9 @@ import csv
 # can also simulate modulated sin waves for d, duvx , dvx, (dvda -deaths all v doses)  
 
 
-title_text="Simulate D add dAEFI to simulated sinus Wave - threshold dAEFI 1/5000 DOSE RAND_DAY_RANGE 1-250 WND_14 AG 50-54 vs 75-79" # Title of plot
-annotation_text = "legend: ae -> dAEFIs added, n-> normalized per 10000 People, pe -> simulate equal death rate proportional to population for dvx and duvx"
-plotfile_name = "AB) backcalc dAEFI simulation sinus known basline 1000" 
+title_text="Add dAEFIs to real D-Curves or to generated sinus Wave D-Curves  - threshold dAEFI 1/5000 DOSE RAND_DAY_RANGE 1-250 WND_14 AG 50-54 vs 75-79" # Title of plot
+annotation_text = "legend: ae -> dAEFIs added, n-> normalized per 10000 People, pe -> simulate equal death rate for dvx and duvx (proportional to population)"
+plotfile_name = "AB) backcalc dAEFI simulation unknown real world basline" 
 plot_name_append_text=""        # apend text - to plotfile name and directory, to save in uniqe file location
 normalize=True                  # normalize dvd values
 normalize_cumulate_deaths=False # normalize cumulated deaths bevore cummulation
@@ -40,13 +40,13 @@ window_size = 14                # Define the window size for the rolling average
 simulate_sinus = False           # uses modulated sin wave to simulate Death curve
 simulate_proportinal_norm = False   # simulate constant death curve adjusted to (uvx, vx , total) population (use real data or sin wave for each dey 1..1534)
 simulate_dAEFI = True
-real_world_baseline = False
+real_world_baseline = True
 
 def main():
 
     # List of tuples with the age bands you want to compare
     age_band_compare = [
-                ('65-69', '75-79'),
+                ('50-54', '75-79'),
         ]
         
     # CSV file pairs with age_band with death and population/doses data  
