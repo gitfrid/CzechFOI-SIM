@@ -111,12 +111,14 @@ The idea is that the two populations, which are one year apart, can be considere
 
 It calculates the difference in normalized death rates (per 100,000 people) and takes a rolling average of this difference as the baseline. It also calculates the difference in normalized doses administered (per 100,000 doses). However, a reliable and accurate method for calculating estimated dAEFIs has not yet been found.
 
+Can also calculate rolling and phaseshift correlation 
+
 For Database and CSV File creation in the Terra folder [All AG SQL Time.sql]() was used.
 _________________________________________
 
 **DIF-VDA n all AgeGroups**
 
-shows the estimated mean dAEFI values for AG 1 to 113.
+Shows the estimated mean dAEFI values for AG 1 to 113.
 And below the normalized DIF-VDA (All Doses difference for all AG) 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/Maean%20estimate%20dAEFI%20all-AgeGroups.png width="1280" height="auto">
