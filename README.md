@@ -103,6 +103,50 @@ Additionally, 1/5000 dAEFIs are added (legend label "ae")
 The estimated dAEFIs per dose, e.g., 388 vs. 5000 - if basline is unknown.
 _________________________________________
 
+**Phyton script [AC) calc dAEFI diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AC%29%%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot.py)**
+
+The script compares age groups in 1-year intervals. 
+
+The idea is that the two populations, which are one year apart, can be considered comparable. 
+
+It calculates the difference in normalized death rates (per 100,000 people) and takes a rolling average of this difference as the baseline. It also calculates the difference in normalized doses administered (per 100,000 doses). However, a reliable and accurate method for calculating estimated dAEFIs has not yet been found.
+
+For Database and CSV File creation in the Terra folder [All AG SQL Time.sql]() was used.
+_________________________________________
+
+**DIF-VDA n all AgeGroups**
+
+shows the estimated mean dAEFI values for AG 1 to 113.
+And below the normalized DIF-VDA (All Doses difference for all AG) 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/Maean%20estimate%20dAEFI%20all-AgeGroups.png width="1280" height="auto">
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20n%20all%20AgeGroups.png width="1280" height="auto">
+<br>
+_________________________________________
+
+**DIF-VDA Basline Mean estimate dAEFI n - Some examples of different AGs**
+<br>**For AG 13-14**
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG13-14.png width="1280" height="auto">
+<br>**For AG 14-15**
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG14-15.png width="1280" height="auto">
+<br>**For AG 17-18**
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG17-18.png width="1280" height="auto">
+<br>
+<br>**For AG 42-43**
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG42-43.png width="1280" height="auto">
+<br>
+<br>**For AG 71-72**
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG71-72.png width="1280" height="auto">
+<br>
+<br>**For AG 81-82**
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG81-82.png width="1280" height="auto">
+<br>
+<br>**For AG 107-108**
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG107-108.png width="1280" height="auto">
+<br>
+_________________________________________
+
 ### Software Requirements:
 - [Python 3.12.5](https://www.python.org/downloads/) to run the scripts.
 - [Visual Studio Code 1.92.2](https://code.visualstudio.com/download) to edit and run scripts.
