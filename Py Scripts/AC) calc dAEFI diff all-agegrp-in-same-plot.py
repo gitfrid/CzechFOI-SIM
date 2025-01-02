@@ -731,7 +731,7 @@ def main():
     # If you want to automatically save the plots to prevent them from being overwritten, 
     # you can add the dependent variables here!
     # html_file_path = rf'C:\CzechFOI-SIM\Plot Results\dAEFI\{plotfile_name} {plot_name_append_text} AG_{age_band_compare[pair_nr][0]} vs {age_band_compare[pair_nr][1]}.html'
-    html_file_path = rf'C:\CzechFOI-SIM\Plot Results\dAEFI\{plotfile_name} {plot_name_append_text} AG_0-113.html'
+    html_file_path = rf'C:\github\CzechFOI-SIM\Plot Results\dAEFI\{plotfile_name} {plot_name_append_text} AG_0-113.html'
     trace_manager_res.save_to_html(html_file_path)
     pair_nr += 1 # claculate next age band of the tuple (pair)
 
