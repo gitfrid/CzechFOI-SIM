@@ -103,7 +103,7 @@ Additionally, 1/5000 dAEFIs are added (legend label "ae")
 The estimated dAEFIs per dose, e.g., 388 vs. 5000 - if basline is unknown.
 _________________________________________
 
-**Phyton script [AC) calc dAEFI diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AC%29%%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot.py)**
+**Phyton script [AC) calc dAEFI diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AC%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot.py)**
 
 The script compares age groups in 1-year intervals. 
 
