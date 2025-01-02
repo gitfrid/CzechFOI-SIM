@@ -119,9 +119,11 @@ _________________________________________
 **DIF-VDA n all AgeGroups**
 
 Shows the estimated mean dAEFI values for AG 1 to 113.
-And below the normalized DIF-VDA (All Doses difference for all AG) 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/Maean%20estimate%20dAEFI%20all-AgeGroups.png width="1280" height="auto">
+<br>
+
+Shows the normalized DIF-VDA (All Doses difference for all AG) 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20n%20all%20AgeGroups.png width="1280" height="auto">
 <br>
