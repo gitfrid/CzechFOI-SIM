@@ -3,6 +3,9 @@
 <br>
 <br>**Investigates whether there is a reliable statistical way to determine the dAEFI rate when the baseline is unknown (real world).**
 <br>
+**As far as I know, 
+this (vital) problem is still waiting for the head that can solve it?**
+
 Simulates dAEFIs to analyse the impact on the curve and back-calculate the dAEFIs rate (comparing known and unknown baseline).
 Uses real Czech FOI (Freedom of Information) data, or generates d, dvx, duvx data in modulated sine wave form.
 
