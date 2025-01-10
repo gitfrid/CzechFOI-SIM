@@ -184,10 +184,9 @@ The amplitude of the phase shift correlation again changed significantly, but no
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.png width="1280" height="auto">
 <br>
 <br>
-[Download HTML](https://github.com/gitfrid/CzechFOI-SIM/raw/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
-<br>
-asd
 
+[Download](https://github.com/gitfrid/CzechFOI-SIM/raw/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
+<br>
 _________________________________________
 
 ### Software Requirements:
