@@ -154,15 +154,19 @@ _________________________________________
 
 **Refactored Scripts AF) AG)**
 
-The scripts calculates the differences in doses and deaths for similar age bands (one year appart), as specified in the `age_band_compare` list.
-"It then summarizes the differences and adds DAEFIs (one per 5,000 doses). Additionally, it compares the rolling and shift correlations of the raw D-curve with the D-curve that includes the added DAEFI events.
+
+The [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AF%29%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot.py) calculates the differences in doses and deaths for similar age bands (one year appart), as specified in the `age_band_compare` list. It then summarizes the differences and adds dAEFIs (one per 5,000 doses). Additionally, it compares the rolling and shift correlations of the raw D-curve with the D-curve that includes the added dAEFI events.
+
+With one dAEFI per 5,000 doses, there is no significant change in the D-curves, including the rolling Pearson correlation, making it irrelevant in this context. 
+Although the amplitude of the phase shift correlation has changed significantly, this is not helpful since the baseline is unknown
+
 <br>
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF)%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.png width="1280" height="auto">
 <br>
 
-Shows the normalized DIF-VDA (All Doses difference for all AG) 
+Zoomed in to highlight the minimal difference at 1/5,000 doses.
 <br>
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF)%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85%20zoom.png width="1280" height="auto">
 <br>
 _________________________________________
 
