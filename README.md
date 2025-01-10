@@ -152,7 +152,7 @@ _________________________________________
 <br>
 _________________________________________
 
-**Refactored Scripts AF) AG)**
+**Refactored Scripts AF)**
 
 
 The [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AF%29%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot.py) calculates the differences in doses and deaths for similar age bands (one year appart), as specified in the `age_band_compare` list. It then summarizes the differences and adds dAEFIs (one per 5,000 doses). Additionally, it compares the rolling and shift correlations of the raw D-curve with the D-curve that includes the added dAEFI events.
@@ -170,6 +170,21 @@ Zoomed in to highlight the minimal difference at 1/5,000 doses.
 <br>
 <br>
 [Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF%29%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
+<br>
+_________________________________________
+
+**Refactored Scripts AG)**
+
+The [Python script]() 
+Differnt code but does almost the same as AF Script.
+It uses the change of the cummulated Doses to calculate Rolling Pearson correlation, which shows a big correlation but again is irrelevant in the dAEFI context. 
+The amplitude of the phase shift correlation again changed significantly, but not helpful without known basline.
+
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+[Download AG html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
 <br>
 
 _________________________________________
