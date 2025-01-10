@@ -175,10 +175,9 @@ _________________________________________
 
 **Refactored Scripts AG)**
 
-The [Python script]() 
-Differnt code but does almost the same as AF Script.
-It uses the change of the cummulated Doses to calculate Rolling Pearson correlation, which shows a big correlation but again is irrelevant in the dAEFI context. 
-The amplitude of the phase shift correlation again changed significantly, but not helpful without known basline.
+This [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot.py) employs a different approach but produces results similar to those of the AF script.
+It calculates the rolling Pearson correlation based on changes in cumulative doses, revealing a strong correlation. 
+However, this correlation is not relevant in the context of rare dAEFIs. Additionally, although the amplitude of the phase shift correlation changes significantly, this information is not useful without a known baseline
 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.png width="1280" height="auto">
