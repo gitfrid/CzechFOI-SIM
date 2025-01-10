@@ -152,6 +152,20 @@ _________________________________________
 <br>
 _________________________________________
 
+**Refactored Scripts AF) AG)**
+
+The scripts calculates the differences in doses and deaths for similar age bands (one year appart), as specified in the `age_band_compare` list.
+"It then summarizes the differences and adds DAEFIs (one per 5,000 doses). Additionally, it compares the rolling and shift correlations of the raw D-curve with the D-curve that includes the added DAEFI events.
+<br>
+<img src= width="1280" height="auto">
+<br>
+
+Shows the normalized DIF-VDA (All Doses difference for all AG) 
+<br>
+<img src= width="1280" height="auto">
+<br>
+_________________________________________
+
 ### Software Requirements:
 - [Python 3.12.5](https://www.python.org/downloads/) to run the scripts.
 - [Visual Studio Code 1.92.2](https://code.visualstudio.com/download) to edit and run scripts.
