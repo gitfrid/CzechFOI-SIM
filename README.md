@@ -168,6 +168,10 @@ Zoomed in to highlight the minimal difference at 1/5,000 doses.
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF)%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85%20zoom.png width="1280" height="auto">
 <br>
+<br>
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF%29%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
+<br>
+
 _________________________________________
 
 ### Software Requirements:
