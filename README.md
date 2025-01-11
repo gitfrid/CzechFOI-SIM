@@ -11,8 +11,7 @@ Simulated data can be used to check for calculation errors in your code, it is p
 
 The [Python Scripts](https://github.com/gitfrid/CzechFOI-SIM/tree/main/Py%20Scripts) process and visualize CSV data from the [TERRA folder](https://github.com/gitfrid/CzechFOI-SIM/tree/main/TERRA), generating interactive HTML plots. <br>Each plot compares two age groups. To interact with the plots, click on a legend entry to show/hide curves.
 
-Refactored Scripts AF) and AG) compare different AG groups (e.g., 1-year intervals) by calculating the differences between two similar, closely positioned age groups.
-The differences are then summed, and simulated dAEFIs are added to examine the curves with and without dAEFIs.
+**Refactored Scripts AF) and AG)** compare AG groups (e.g., 1-year intervals) by calculating differences between closely positioned age groups. The differences are summed, and simulated dAEFIs are added to examine the curves with and without dAEFIs. Multiple AG groups are plotted into a single HTML file for comparison
 
 Download the processed plots for analysis from the [Plot Results Folder](https://github.com/gitfrid/CzechFOI-SIM/tree/main/Plot%20Results/dAEFI). Or simply adapt and run the [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AB%29%20backcalc%20dAEFI%20simulation.py) to meet your own analysis requirements!
 
