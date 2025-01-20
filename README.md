@@ -11,6 +11,8 @@ Simulated data can be used to check for calculation errors in your code, it is p
 
 The [Python Scripts](https://github.com/gitfrid/CzechFOI-SIM/tree/main/Py%20Scripts) process and visualize CSV data from the [TERRA folder](https://github.com/gitfrid/CzechFOI-SIM/tree/main/TERRA), generating interactive HTML plots. <br>Each plot compares two age groups. To interact with the plots, click on a legend entry to show/hide curves.
 
+**Refactored Scripts AF) and AG)** compare AG groups (e.g., 1-year intervals) by calculating differences between closely positioned age groups. The differences are summed, and simulated dAEFIs are added to examine the curves with and without dAEFIs. Multiple AG groups are plotted into a single HTML file for comparison
+
 Download the processed plots for analysis from the [Plot Results Folder](https://github.com/gitfrid/CzechFOI-SIM/tree/main/Plot%20Results/dAEFI). Or simply adapt and run the [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AB%29%20backcalc%20dAEFI%20simulation.py) to meet your own analysis requirements!
 
 Dates are counted as the number of days since [January 1, 2020](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/Days%20to%20Date%20Translation%20Day%20Date%20Translation/Days%20to%20Date%20Translation%20Day%20Date%20Translation.png), for easier processing. "AGE_2023" represents age on January 1, 2023. <br>The data can optionally be normalized per 100,000 for comparison.
@@ -149,6 +151,42 @@ _________________________________________
 <br>
 <br>**For AG 107-108**
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AC)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/DIF-VDA%20Basline%20Mean%20estimate%20dAEFI%20n%20AG107-108.png width="1280" height="auto">
+<br>
+_________________________________________
+
+**Refactored Scripts AF)**
+
+
+The [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AF%29%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot.py) calculates the differences in doses and deaths for similar age bands (one year appart), as specified in the `age_band_compare` list. It then summarizes the differences and adds dAEFIs (one per 5,000 doses). Additionally, it compares the rolling and shift correlations of the raw D-curve with the D-curve that includes the added dAEFI events.
+
+With one dAEFI per 5,000 doses, there is no significant change in the D-curves, including the rolling Pearson correlation, making it irrelevant in this context. 
+Although the amplitude of the phase shift correlation has changed significantly, this is not helpful since the baseline is unknown
+
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF)%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.png width="1280" height="auto">
+<br>
+
+Zoomed in to highlight the minimal difference at 1/5,000 doses.
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF)%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF)%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85%20zoom.png width="1280" height="auto">
+<br>
+<br>
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AF%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AF%29%20calc%20dAEFI%20diff%20norm%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
+<br>
+_________________________________________
+
+**Refactored Scripts AG)**
+
+This [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot.py) employs a different approach but produces results similar to those of the AF script.
+It calculates the rolling Pearson correlation based on changes in cumulative doses, revealing a strong correlation. 
+However, this correlation is not relevant in the context of rare dAEFIs. Additionally, although the amplitude of the phase shift correlation changes significantly, this information is not useful without a known baseline
+
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+
+[Download](https://github.com/gitfrid/CzechFOI-SIM/raw/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
 <br>
 _________________________________________
 
