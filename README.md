@@ -39,7 +39,8 @@ Uses the DoWhy Library https://github.com/py-why/dowhy
 <p>DoWhy is a Python library for causal inference that allows modeling and testing of causal assumptions, based on a unified language for causal inference.
 <strong>See the book <em>Models, Reasoning, and Inference</em> by Judea Pearl for deeper insights, that goes far beyond my horizon.</strong></p>
 <br>
-DoWhy Causal Impact estimates, showing the effect of changes in doses and deaths between age groups one year apart
+DoWhy Causal Impact estimates, showing the effect of changes in doses and deaths between age groups one year apart.
+The blue crosses represent the causal estimate after adding 1 dAEFI per 5000 doses in a random 250-day time window to the raw mortality data.
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI)%20dowhy%20diff%20all-agegrp-in-same-plot/AI)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.png width="1280" height="auto">
 
 <br>
