@@ -31,6 +31,27 @@ Access the original Czech FOI data from a [Freedom of Information request](https
 <br>
 
 _________________________________________
+**DoWhy Analysis**
+
+This [Python script](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AI%29%20dowhy%20diff%20all-agegrp-in-same-plot.py) Uses the DoWhy Library https://github.com/py-why/dowhy
+<br>
+
+DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference.
+**See Book Models, Reasoning, and Inference by Judea Pearl, that goes far beyond my horizon.**
+
+<br>
+Plot of DoWhy Causal Impact estimates. Eeffect of changes in doses and deaths between age groups one year apart.
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI)%20dowhy%20diff%20all-agegrp-in-same-plot/AI)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.png width="1280" height="auto">
+
+<br>
+Phasediagram Doses/Deaths between age groups one year apart.
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI)%20dowhy%20diff%20all-agegrp-in-same-plot/AI)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85%20Phasediagram.png width="1280" height="auto">
+<br>
+<br>
+
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI%29%20dowhy%20diff%20all-agegrp-in-same-plot/AI%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+<br>
+_________________________________________
 **dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_50-54**
 <br>
 
@@ -186,7 +207,7 @@ However, this correlation is not relevant in the context of rare dAEFIs. Additio
 <br>
 <br>
 
-[Download](https://github.com/gitfrid/CzechFOI-SIM/raw/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/raw/main/Plot%20Results/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot/AG%29%20calc%20dAEFI%20diff%20all-agegrp-in-same-plot%20dAEFI%20AG_15-85.html)
 <br>
 _________________________________________
 
