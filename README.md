@@ -36,12 +36,10 @@ _________________________________________
 **Phyton script [AI) dowhy diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AI%29%20dowhy%20diff%20all-agegrp-in-same-plot.py)**
 Uses the DoWhy Library https://github.com/py-why/dowhy
 <br>
-
-DoWhy is a Python library for causal inference that supports explicit modeling and testing of causal assumptions. DoWhy is based on a unified language for causal inference.
-**See Book Models, Reasoning, and Inference by Judea Pearl, that goes far beyond my horizon.**
-
+<p>DoWhy is a Python library for causal inference that allows modeling and testing of causal assumptions, based on a unified language for causal inference.
+<strong>See the book <em>Models, Reasoning, and Inference</em> by Judea Pearl for deeper insights, that goes far beyond my horizon.</strong></p>
 <br>
-Plot of DoWhy Causal Impact estimates. Eeffect of changes in doses and deaths between age groups one year apart.
+DoWhy Causal Impact estimates, showing the effect of changes in doses and deaths between age groups one year apart
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI)%20dowhy%20diff%20all-agegrp-in-same-plot/AI)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.png width="1280" height="auto">
 
 <br>
