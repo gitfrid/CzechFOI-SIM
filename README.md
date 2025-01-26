@@ -45,7 +45,7 @@ Red crosses represent the mean points of two age groups (one year apart), showin
 <br>
 Blue crosses represent the AEF D_Curve (RAW D_Curve with added dAEFIs), in this example, 1 dAEFI per 5000 doses given.
 <br>
-Causal effects are not yet in the plot.
+Causal effects are not yet shown in the plot.
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI)%20dowhy%20diff%20all-agegrp-in-same-plot/AI)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.png width="1280" height="auto">
 
 <br>
