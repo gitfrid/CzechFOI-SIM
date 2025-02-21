@@ -31,7 +31,7 @@ Access the original Czech FOI data from a [Freedom of Information request](https
 <br>
 
 _________________________________________
-**DoWhy Analysis**
+**DoWhy Analysis of Causal Impact Estimates**
 
 **Phyton script [AI) dowhy diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AI%29%20dowhy%20diff%20all-agegrp-in-same-plot.py)**
 Uses the DoWhy Library https://github.com/py-why/dowhy
@@ -39,22 +39,26 @@ Uses the DoWhy Library https://github.com/py-why/dowhy
 <p>DoWhy is a Python library for causal inference that allows modeling and testing of causal assumptions, based on a unified language for causal inference.
 <strong>See the book <em>Models, Reasoning, and Inference</em> by Judea Pearl for deeper insights, that goes far beyond my horizon.</strong></p>
 <br>
-DoWhy Causal Impact estimates, showing the effect of changes in doses and deaths between age groups one year apart.
-<br>
-Blue crosses represent the mean points of two age groups (one year apart), showing the average differences in treatment dose (Doses_curve) and observed outcome (RAW D_Curve).
-<br>
-Red crosses represent the AEF D_Curve (RAW D_Curve with added dAEFIs), in this example, 1 dAEFI per 5000 doses given.
-<br>
-Causal effects are not yet shown in the plot.
-<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI)%20dowhy%20diff%20all-agegrp-in-same-plot/AI)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.png width="1280" height="auto">
 
+**mean (RAW) blue** actual raw data averages of doses and deaths for an age group, along with estimated causal impact of doses on deaths by DoWhy.
+**mean (AEF) red** simulation of one additional death per 5000 doses, added to the raw data, along with estimated causal impact of doses on deaths by DoWhy.
 <br>
-Phasediagram Doses/Deaths between age groups one year apart.
-<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI)%20dowhy%20diff%20all-agegrp-in-same-plot/AI)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85%20Phasediagram.png width="1280" height="auto">
 <br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW)%20dowhy%20diff%20all-agegrp-in-same-plot/AW)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20mean%20AG_15-85.png width="1280" height="auto">
+<br>
+DoWhy causal impact estimates: comparing real (RAW) data in green with simulated (AEF) data in yellow, where one additional death per 5000 doses is simulated, for age group 15-84
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW)%20dowhy%20diff%20all-agegrp-in-same-plot/AW)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20estimate%20AG_15-85.png width="1280" height="auto">
+<br>
+The difference between DoWhy's estimate of the causal effect of the simulated data (AEF) and the real data (RAW), converted into the number of doses per death.
+DoWhy's estimate of the causal effect per number of doses is fairly close to the simulation of 5000 doses per additional death.
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW)%20dowhy%20diff%20all-agegrp-in-same-plot/AW)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20Doses%20per%20Death%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+<img src= width="1280" height="auto">
 <br>
 
-[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AI%29%20dowhy%20diff%20all-agegrp-in-same-plot/AI%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
 <br>
 _________________________________________
 **dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_50-54**
