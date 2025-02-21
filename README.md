@@ -49,6 +49,13 @@ Uses the DoWhy Library https://github.com/py-why/dowhy
 DoWhy causal impact estimates: comparing real (RAW) data in green with simulated (AEF) data in yellow, where one additional death per 5000 doses is simulated, for age group 15-84
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW)%20dowhy%20diff%20all-agegrp-in-same-plot/AW)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20estimate%20AG_15-85.png width="1280" height="auto">
 <br>
+The difference between DoWhy's estimate of the causal effect of the simulated data (AEF) and the real data (RAW), converted into the number of doses per death.
+DoWhy's estimate of the causal effect per number of doses is fairly close to the simulation of 5000 doses per additional death.
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW)%20dowhy%20diff%20all-agegrp-in-same-plot/AW)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20Doses%20per%20Death%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+<img src= width="1280" height="auto">
 <br>
 
 [Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
