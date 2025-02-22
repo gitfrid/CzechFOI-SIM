@@ -112,6 +112,7 @@ Phase diagram difference values: D_Curve and Doses_curve between neighboring age
 <br>
 
 [Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+**Phyton script [AY) dowhy diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot.py)**
 <br>
 _________________________________________
 **Here Instead of comparing the real curve with the simulated curve, I compared the real (RAW) difference of Doses_Curve and Death_Curve for two neighboring age groups. This method helps to cancel out external disturbances. The population at one-year intervals should be quite similar, thus minimizing possible confounders**
@@ -135,7 +136,8 @@ Phase diagram difference values: D_Curve and Doses_curve between neighboring age
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20phase%20diagram%20AG_15-85.png width="1280" height="auto">
 <br>
 
-[Download html]()
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AZ%29%20dowhy%20diff%20all-agegrp-in-same-plot/AZ%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+**Phyton script [AZ) dowhy diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AZ%29%20dowhy%20diff%20all-agegrp-in-same-plot.py)**
 <br>
 _________________________________________
 **dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_50-54**
