@@ -89,6 +89,30 @@ Phase diagram difference values: D_Curve and Doses_curve between neighboring age
 [Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX%29%20dowhy%20diff%20all-agegrp-in-same-plot/AX%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
 <br>
 _________________________________________
+**Below is the same simulation. Instead of comparing the real curve with the simulated curve, I compared the real absolute data (RAW) of two neighboring age groups. The population at one-year intervals should be quite similar, thus minimizing possible confounders**
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY)%20dowhy%20diff%20all-agegrp-in-same-plot/AY)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20mean%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+DoWhy causal impact estimates: comparing real (RAW) data in green with simulated (AEF) data in yellow, where one additional death per 5000 doses is simulated, for age group 15-84
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY)%20dowhy%20diff%20all-agegrp-in-same-plot/AY)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+The difference between DoWhy's estimate of the causal effect of the simulated data (AEF) and the real data (RAW), converted into the number of doses per death.
+**DoWhy's estimate of the causal effect per number of doses, the outliers are not visible, because zoomed in**
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY)%20dowhy%20diff%20all-agegrp-in-same-plot/AY)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20Doses%20per%20Death%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+Phase diagram difference values: D_Curve and Doses_curve between neighboring age groups at one-year intervals, for days 0-1533 and age group 15-84 (RAW, AEF) 
+<br>
+<img src= width="1280" height="auto">
+<br>
+
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+<br>
+_________________________________________
 **dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_50-54**
 <br>
 
