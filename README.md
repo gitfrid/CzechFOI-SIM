@@ -86,7 +86,7 @@ Phase diagram difference values: D_Curve and Doses_curve between neighboring age
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX)%20dowhy%20diff%20all-agegrp-in-same-plot/AX)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20phase%20curve%20AG_15-85.png width="1280" height="auto">
 <br>
 
-[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX%29%20dowhy%20diff%20all-agegrp-in-same-plot/AX%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
 <br>
 _________________________________________
 **dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_50-54**
