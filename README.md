@@ -87,6 +87,7 @@ Phase diagram difference values: D_Curve and Doses_curve between neighboring age
 <br>
 
 [Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX%29%20dowhy%20diff%20all-agegrp-in-same-plot/AX%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+**Phyton script [AX) dowhy diff all-agegrp-in-same-plot](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Py%20Scripts/AX%29%20dowhy%20diff%20all-agegrp-in-same-plot.py)**
 <br>
 _________________________________________
 **Below is the same simulation. Instead of comparing the real curve with the simulated curve, I compared the real absolute data (RAW) of two neighboring age groups. The population at one-year intervals should be quite similar, thus minimizing possible confounders**
