@@ -57,9 +57,33 @@ The difference between DoWhy's estimate of the causal effect of the simulated da
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW)%20dowhy%20diff%20all-agegrp-in-same-plot/AW)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20Doses%20per%20Death%20AG_15-85.png width="1280" height="auto">
 <br>
 <br>
-Phase diagram of absolute values: D_Curve to Doses_curve for days 0-1533 and age group 15-84
+Phase diagram of absolute values: D_Curve to Doses_curve for days 0-1533 and age group 15-84 (RAW, AEF) 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW)%20dowhy%20diff%20all-agegrp-in-same-plot/AW)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20phase%20curve%20AG_15-85.png width="1280" height="auto">
+<br>
+[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+<br>
+<br>
+_________________________________________
+**Below is the same simulation, but instead of using the absolute values of doses and deaths for each age group, it shows the differences in doses and deaths between neighboring age groups at one-year intervals. This method helps to cancel out external disturbances.**
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX)%20dowhy%20diff%20all-agegrp-in-same-plot/AX)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20mean%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+DoWhy causal impact estimates: comparing real (RAW) data in green with simulated (AEF) data in yellow, where one additional death per 5000 doses is simulated, for age group 15-84
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX)%20dowhy%20diff%20all-agegrp-in-same-plot/AX)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+The difference between DoWhy's estimate of the causal effect of the simulated data (AEF) and the real data (RAW), converted into the number of doses per death.
+**DoWhy's estimate of the causal effect per number of doses is fairly close to the simulation of 5000 doses per additional death.**
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX)%20dowhy%20diff%20all-agegrp-in-same-plot/AX)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20Doses%20per%20Death%20AG_15-85.png width="1280" height="auto">
+<br>
+<br>
+Phase diagram difference values: D_Curve and Doses_curve between neighboring age groups at one-year intervals, for days 0-1533 and age group 15-84 (RAW, AEF) 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AX)%20dowhy%20diff%20all-agegrp-in-same-plot/AX)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20phase%20curve%20AG_15-85.png width="1280" height="auto">
 <br>
 
 [Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot/AW%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
