@@ -113,7 +113,7 @@ Phase diagram difference values: D_Curve and Doses_curve between neighboring age
 [Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
 <br>
 _________________________________________
-**Here Instead of comparing the real curve with the simulated curve, I compared the real (RAW) difference in Doses_Corve and Death_Curve of two neighboring age groups. This method helps to cancel out external disturbances. The population at one-year intervals should be quite similar, thus minimizing possible confounders**
+**Here Instead of comparing the real curve with the simulated curve, I compared the real (RAW) difference of Doses_Curve and Death_Curve for two neighboring age groups. This method helps to cancel out external disturbances. The population at one-year intervals should be quite similar, thus minimizing possible confounders**
 <br>
 <br>
 <img src= width="1280" height="auto">
