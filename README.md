@@ -126,7 +126,7 @@ DoWhy causal impact estimates: comparing death and doses difference in real (RAW
 The difference between DoWhy's estimate of the causal effect of difference in doses deaths of real data (RAW) between two neigbour age groups, converted into the number of doses per death.
 **DoWhy's estimate of the causal effect per number of doses, the outliers are not visible, because zoomed in**
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY)%20dowhy%20diff%20all-agegrp-in-same-plot/AY)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20Doses%20per%20Death%20AG_15-85.png width="1280" height="auto">
+<img src= width="1280" height="auto">
 <br>
 <br>
 Phase diagram difference values: D_Curve and Doses_curve between neighboring age groups at one-year intervals, for days 0-1533 and age group 15-84 (RAW, AEF) 
@@ -134,7 +134,7 @@ Phase diagram difference values: D_Curve and Doses_curve between neighboring age
 <img src= width="1280" height="auto">
 <br>
 
-[Download html](https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot/AY%29%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20AG_15-85.html)
+[Download html]()
 <br>
 _________________________________________
 **dAEFI simulation known Basline. <br>One dAEFI per 5000 Doses RAND_DAY_RANGE 1-250 AVG_WND 14: AG_50-54**
