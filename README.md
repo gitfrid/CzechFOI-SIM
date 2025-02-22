@@ -116,17 +116,17 @@ _________________________________________
 **Here Instead of comparing the real curve with the simulated curve, I compared the real (RAW) difference of Doses_Curve and Death_Curve for two neighboring age groups. This method helps to cancel out external disturbances. The population at one-year intervals should be quite similar, thus minimizing possible confounders**
 <br>
 <br>
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20mean%20AG_15-85.png width="1280" height="auto">
 <br>
 <br>
 DoWhy causal impact estimates: comparing death and doses difference in real (RAW) data between two neigbour age groups one year appart, for age group 15-84
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20AG_15-85.png width="1280" height="auto">
 <br>
 <br>
 The difference between DoWhy's estimate of the causal effect of difference in doses deaths of real data (RAW) between two neigbour age groups, converted into the number of doses per death.
 **DoWhy's estimate of the causal effect per number of doses, the outliers are not visible, because zoomed in**
 <br>
-<img src= width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-SIM/blob/main/Plot%20Results/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot/AZ)%20dowhy%20diff%20all-agegrp-in-same-plot%20dAEFI%20causalimpact%20causal%20estimate%20Doses%20per%20Death%20AG_15-85.png width="1280" height="auto">
 <br>
 <br>
 Phase diagram difference values: D_Curve and Doses_curve between neighboring age groups at one-year intervals, for days 0-1533 and age group 15-84 (RAW, AEF) 
